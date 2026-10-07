@@ -2,7 +2,7 @@ import zipfile
 import zlib
 
 passwords = "Ashley-Madison.txt"
-Zip_Path = 'guido_secrets.zip'
+Zip_Path = 'whitehouse_secrets.zip'
 progress_every = 10000
     
 def load_passwords(path):
@@ -20,7 +20,7 @@ def crack(zip_path, passwords):
                 if i % progress_every == 0:
                     print(f"Trying {i} passwords, currently on: {password}")
                 try:
-                    zf.extractall(path ="guido_secrets", pwd=password.encode())
+                    zf.extractall(path ="whitehouse_secrets", pwd=password.encode())
                 except (RuntimeError, zipfile.BadZipFile, zlib.error):
                         continue
                 else:
