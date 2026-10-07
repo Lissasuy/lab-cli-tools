@@ -3,7 +3,7 @@ import zlib
 
 passwords = "Ashley-Madison.txt"
 Zip_Path = 'guido_secrets.zip'
-progress_every = 100
+progress_every = 10000
     
 def load_passwords(path):
     passwords = []
