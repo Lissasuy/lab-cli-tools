@@ -32,6 +32,7 @@ def crack(zip_path, passwords):
         return None
 
 if __name__ == "__main__":
-    passwords = load_passwords("Ashley-Madison.txt")
+    passwords = load_passwords(passwords)
     print(f"Loaded {len(passwords)} candidate passwords from {passwords}")
-    crack("whitehouse_secrets.zip", passwords)
+    crack(Zip_Path, passwords)
+    
